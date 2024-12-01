@@ -3,13 +3,11 @@ using TMPro;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    // Singleton instance
     public static PlayerHealthManager Instance;
 
-    // Make health public for easy access from other scripts
     public int health = 3; // Initial health
-    [SerializeField] private int maxHealth = 5; // Maximum health
-    [SerializeField] TMP_Text healthText; // Reference to TextMeshPro for health display
+    [SerializeField] private int maxHealth = 5; 
+    [SerializeField] TMP_Text healthText;
     string HealthTag = "Health";
 
     [SerializeField] [Tooltip("Name of scene to move to when health reaches 0")] string sceneName;
@@ -23,8 +21,8 @@ public class PlayerHealthManager : MonoBehaviour
         }
         else
         {
-            Instance = this; // Set the singleton instance
-            DontDestroyOnLoad(gameObject); // Keep the object between scene loads
+            Instance = this; 
+            DontDestroyOnLoad(gameObject); 
         }
     }
 
@@ -39,7 +37,7 @@ public class PlayerHealthManager : MonoBehaviour
         if (health > 0)
         {
             health--; // Decrease health
-            UpdateHealthDisplay(); // Update health display
+            UpdateHealthDisplay(); 
         }
     }
 
@@ -58,8 +56,8 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if (other.CompareTag(HealthTag))
         {
-            IncreaseHealth(); // Increase health when collecting a heart
-            Destroy(other.gameObject); // Remove the heart
+            IncreaseHealth();
+            Destroy(other.gameObject);
         }
     }
 
