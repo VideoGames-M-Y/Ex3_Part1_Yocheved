@@ -1,5 +1,5 @@
 
-# Unity Weekly Assignment – Prefabs And Triggers – Part 1 – Yocheved
+# Unity Weekly Assignment – Prefabs And Triggers
 
 Welcome to the **Unity Weekly Assignment**! This document contains all the essential links and information for the first part of this assignment.
 
